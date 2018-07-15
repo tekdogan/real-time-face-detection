@@ -23,4 +23,4 @@ Capturing frames from webcam and assigning it to a variable for processing is do
 cap = VideoCapture(0)
 ```
 
-*to be contiued...*
+*to be continued...*
