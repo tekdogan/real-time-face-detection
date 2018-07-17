@@ -1,6 +1,6 @@
 # real-time-face-detection
 
-This is an OpenCV project which gets frames from your webcam and outputs as a video in real time with faces detected.
+This is an OpenCV project which gets frames from your webcam and outputs as a video in real time with faces detected. We will be using *Haar Feature-based Cascade Classifiers* for face detection. You can learn more about it by clicking [here](https://docs.opencv.org/3.4/d7/d8b/tutorial_py_face_detection.html).
 
 ## Tutorial
 
@@ -33,27 +33,27 @@ Let's take a look of this function's parameters:
 And now the functions looks like:
 
 ```python
-faces = faceCascade.detectMultiScale(
-    gray,
-    scaleFactor=1.2,
-    minNeighbors=5,
-    minSize=(30, 30),
-    flags=cv2.cv.CV_HAAR_SCALE_IMAGE
-)
+    faces = faceCascade.detectMultiScale(
+        gray,
+        scaleFactor=1.2,
+        minNeighbors=5,
+        minSize=(30, 30),
+        flags=cv2.cv.CV_HAAR_SCALE_IMAGE
+    )
 ```
 
 
 For every face detected by `detectMultiScale` function, we draw a red rectangle around it.
 
 ```python
-for (x, y, w, h) in faces:
-    cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
+    for (x, y, w, h) in faces:
+        cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
 ```
 
 And yield the output as a frame.
 
 ```python
-cv2.imshow('Face Detection Program', frame)
+    cv2.imshow('Face Detection Program', frame)
 ```
 
 Press `esc` key to close the window and shut down the program.
