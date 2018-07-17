@@ -43,5 +43,35 @@ faces = faceCascade.detectMultiScale(
 ```
 
 
+For every face detected by `detectMultiScale` function, we draw a red rectangle around it.
+
+```python
+for (x, y, w, h) in faces:
+    cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
+```
+
+And yield the output as a frame.
+
+```python
+cv2.imshow('Face Detection Program', frame)
+```
+
+Press `esc` key to close the window and shut down the program.
+
+```python
+   if cv2.waitKey(1) & 0xFF == 27:
+        break
+
+cap.release()
+cv2.destroyAllWindows()
+```
+
+
+
+
+
+
+
+
 
 *to be continued...*
