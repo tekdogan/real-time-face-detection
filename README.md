@@ -17,7 +17,7 @@ cascPath = "haarcascade_frontalface_default.xml"
 faceCascade = cv2.CascadeClassifier(cascPath)
 ```
 
-Capturing frames from webcam and assigning it to a variable for processing is done by `cv2.VideoCapture()` function. (parameter 0 for default webcam and 1,2... for USB devices)
+Capturing frames from webcam and assigning it to a variable for processing is done by `cv2.VideoCapture()` [function](https://docs.opencv.org/2.4/modules/highgui/doc/reading_and_writing_images_and_video.html?highlight=get#VideoCapture). (parameter 0 for default webcam and 1,2... for USB devices)
 
 ```python
 cap = VideoCapture(0)
