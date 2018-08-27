@@ -24,7 +24,7 @@ cap = VideoCapture(0)
 ```
 
 Now we have to use the `detectMultiScale` [function](https://docs.opencv.org/2.4/modules/objdetect/doc/cascade_classification.html#cascadeclassifier-detectmultiscale) to detect face(s).
-Let's take a look of this function's parameters:
+Let's take a look at this function's parameters:
 * **image:** Matrix of the type CV_8U containing an image where objects are detected. Our type is `gray`.
 * **scaleFactor:** Parameter specifying how much the image size is reduced at each image scale. In this case, we use `1.2`.
 * **minNeighbors:** Parameter specifying how many neighbors each candidate rectangle should have to retain it. We will be using `5` neighbors.
