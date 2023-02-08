@@ -67,11 +67,3 @@ cv2.destroyAllWindows()
 ```
 
 
-
-
-
-
-
-
-
-*to be continued...*
